@@ -1,10 +1,4 @@
 #!/usr/bin/node
-// imports an array and computes a new array
-const list = require('./100-data').list;
-
-const factors = list.map(function (x, i) {
-  return x * i;
-});
-
+const list = require('./100-data.js').list;
 console.log(list);
-console.log(factors);
+console.log(list.map((item, index) => item * index));
