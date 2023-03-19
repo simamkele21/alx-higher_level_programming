@@ -11,7 +11,6 @@ from relationship_city import Base, City
 
 class State(Base):
     """Represents a state for a MySQL database.
-
     Attributes:
         __tablename__ (str): The name of the MySQL table to store States.
         id (sqlalchemy.Integer): The state's id.
@@ -23,3 +22,4 @@ class State(Base):
     name = Column(String(128), nullable=False)
 
     cities = relationship("City", backref="state", cascade="all, delete")
+    
